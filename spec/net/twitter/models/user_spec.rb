@@ -2,68 +2,68 @@ require 'spec_helper'
 require 'net/twitter'
 
 describe Net::Twitter::User, :vcr do
-	let(:unknown_screen_name) { '09hlQHE29534awe' }
-	let(:suspended_screen_name) { 'CodFatherLucas' }
-	let(:existing_screen_name) { 'fullscreen' }
+  let(:unknown_screen_name) { '09hlQHE29534awe' }
+  let(:suspended_screen_name) { 'CodFatherLucas' }
+  let(:existing_screen_name) { 'fullscreen' }
 
-	describe '.find_by' do
-	  subject(:user) { Net::Twitter::User.find_by screen_name: screen_name }
+  describe '.find_by' do
+    subject(:user) { Net::Twitter::User.find_by screen_name: screen_name }
 
-		context 'given an existing (case-insensitive) screen name' do
-			let(:screen_name) { existing_screen_name }
+    context 'given an existing (case-insensitive) screen name' do
+      let(:screen_name) { existing_screen_name }
 
-			it 'returns an object representing that user' do
-				expect(user.screen_name).to eq 'Fullscreen'
-				expect(user.followers_count).to be_an Integer
-			end
-		end
-
-		context 'given an unknown screen name' do
-			let(:screen_name) { unknown_screen_name }
-			it { expect(user).to be_nil }
-		end
-
-		context 'given a suspended screen name' do
-			let(:screen_name) { suspended_screen_name }
-			it { expect(user).to be_nil }
-		end
-	end
-
-	describe '.find_by!' do
-	  subject(:user) { Net::Twitter::User.find_by! screen_name: screen_name }
-
-		context 'given an existing (case-insensitive) screen name' do
-			let(:screen_name) { existing_screen_name }
-
-			it 'returns an object representing that user' do
-				expect(user.screen_name).to eq 'Fullscreen'
-				expect(user.followers_count).to be_an Integer
-			end
-		end
-
-		context 'given an unknown screen name' do
-			let(:screen_name) { unknown_screen_name }
-			it { expect{user}.to raise_error Net::Twitter::UnknownUser }
-		end
-
-		context 'given a suspended screen name' do
-			let(:screen_name) { suspended_screen_name }
-			it { expect{user}.to raise_error Net::Twitter::SuspendedUser }
-		end
-	end
-
-	describe '.where' do
-		context 'given multiple existing (case-insensitive) screen names' do
-      let(:screen_names) { ['brohemian6', existing_screen_name, suspended_screen_name, unknown_screen_name] }
-			subject(:users) { Net::Twitter::User.where screen_name: screen_names }
-
-			it 'returns an array of objects representing those users' do
-				expect(users.map &:screen_name).to contain_exactly('Fullscreen', 'brohemian6')
-				expect(users.map &:followers_count).to all(be_an Integer)
-			end
+      it 'returns an object representing that user' do
+        expect(user.screen_name).to eq 'Fullscreen'
+        expect(user.followers_count).to be_an Integer
+      end
     end
 
-		context 'given multiple unknown or suspended screen names' do
+    context 'given an unknown screen name' do
+      let(:screen_name) { unknown_screen_name }
+      it { expect(user).to be_nil }
+    end
+
+    context 'given a suspended screen name' do
+      let(:screen_name) { suspended_screen_name }
+      it { expect(user).to be_nil }
+    end
+  end
+
+  describe '.find_by!' do
+    subject(:user) { Net::Twitter::User.find_by! screen_name: screen_name }
+
+    context 'given an existing (case-insensitive) screen name' do
+      let(:screen_name) { existing_screen_name }
+
+      it 'returns an object representing that user' do
+        expect(user.screen_name).to eq 'Fullscreen'
+        expect(user.followers_count).to be_an Integer
+      end
+    end
+
+    context 'given an unknown screen name' do
+      let(:screen_name) { unknown_screen_name }
+      it { expect{user}.to raise_error Net::Twitter::UnknownUser }
+    end
+
+    context 'given a suspended screen name' do
+      let(:screen_name) { suspended_screen_name }
+      it { expect{user}.to raise_error Net::Twitter::SuspendedUser }
+    end
+  end
+
+  describe '.where' do
+    context 'given multiple existing (case-insensitive) screen names' do
+      let(:screen_names) { ['brohemian6', existing_screen_name, suspended_screen_name, unknown_screen_name] }
+      subject(:users) { Net::Twitter::User.where screen_name: screen_names }
+
+      it 'returns an array of objects representing those users' do
+        expect(users.map &:screen_name).to contain_exactly('Fullscreen', 'brohemian6')
+        expect(users.map &:followers_count).to all(be_an Integer)
+      end
+    end
+
+    context 'given multiple unknown or suspended screen names' do
       let(:screen_names) { [suspended_screen_name, unknown_screen_name] }
       subject(:users) { Net::Twitter::User.where screen_name: screen_names }
 
@@ -77,7 +77,7 @@ describe Net::Twitter::User, :vcr do
       let(:screen_names) { ('a'..'z').map{|x| ('a'..'e').map{|y| "#{x}#{y}"}}.flatten }
       subject(:users) { Net::Twitter::User.where screen_name: screen_names }
 
-			it { expect{users}.to raise_error Net::Twitter::TooManyUsers }
+      it { expect{users}.to raise_error Net::Twitter::TooManyUsers }
     end
 
     # @see https://dev.twitter.com/rest/public/rate-limits

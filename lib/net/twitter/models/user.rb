@@ -20,8 +20,8 @@ module Net
         # @option params [String] :screen_name The Twitter user’s screen name
         #   (case-insensitive).
         def self.find_by(params = {})
-					find_by! params
-				rescue Errors::UnknownUser, Errors::SuspendedUser
+          find_by! params
+        rescue Errors::UnknownUser, Errors::SuspendedUser
           nil
         end
 
@@ -67,9 +67,9 @@ module Net
           end
         end
 
-			private
+      private
 
-				def self.to_where_params(conditions = {})
+        def self.to_where_params(conditions = {})
           conditions.dup.tap do |params|
             params.each{|k,v| params[k] = v.join(',') if v.is_a?(Array)}
           end
