@@ -1,0 +1,136 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://TWITTER_API_KEY:TWITTER_API_SECRET@api.twitter.com/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Length:
+      - '157'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 11 Oct 2014 01:08:21 UTC
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sat, 11 Oct 2014 01:08:21 GMT
+      Ml:
+      - S
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_a
+      Set-Cookie:
+      - guest_id=v1%3A141298970195572286; Domain=.twitter.com; Path=/; Expires=Mon,
+        10-Oct-2016 01:08:21 UTC
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - d63d4d3bf2e355106c486bf3c279d075
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Transaction:
+      - 038d099f9b129c61
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"ACCESS_TOKEN"}'
+    http_version: 
+  recorded_at: Sat, 11 Oct 2014 01:08:15 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/users/show.json?screen_name=fullscreen
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - ACCESS_TOKEN
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Length:
+      - '1270'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 11 Oct 2014 01:08:22 UTC
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sat, 11 Oct 2014 01:08:22 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_a
+      Set-Cookie:
+      - guest_id=v1%3A141298970205889731; Domain=.twitter.com; Path=/; Expires=Mon,
+        10-Oct-2016 01:08:22 UTC
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read
+      X-Connection-Hash:
+      - 212c0e3bb4a455bc0ab147f8f4b9524b
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '179'
+      X-Rate-Limit-Reset:
+      - '1412990602'
+      X-Transaction:
+      - f0566e9fa1c91113
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: '{"id":238110322,"id_str":"238110322","name":"Fullscreen","screen_name":"Fullscreen","location":"LA
+        \/ Worldwide","description":"The First Media Company for the Connected Generation.\r\n#PowerToTheCreators","url":"http:\/\/t.co\/IuYBnxFitD","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/IuYBnxFitD","expanded_url":"http:\/\/www.fullscreen.com","display_url":"fullscreen.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":48138,"friends_count":2713,"listed_count":378,"created_at":"Fri
+        Jan 14 11:36:27 +0000 2011","favourites_count":58329,"utc_offset":-25200,"time_zone":"Pacific
+        Time (US & Canada)","geo_enabled":true,"verified":true,"statuses_count":19163,"lang":"en","status":{"created_at":"Sat
+        Oct 11 00:52:51 +0000 2014","id":520738765266886656,"id_str":"520738765266886656","text":"#ICYMI:
+        15 Secs of Fullscreen with @SourPatchKids @WalkingDead_AMC @AsapSCIENCE @WeeklyChris
+        @AndreaRussett + More! http:\/\/t.co\/zoLiS9CZSL","source":"\u003ca href=\"http:\/\/twitter.com\"
+        rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":4,"favorite_count":9,"entities":{"hashtags":[{"text":"ICYMI","indices":[0,6]}],"symbols":[],"urls":[{"url":"http:\/\/t.co\/zoLiS9CZSL","expanded_url":"http:\/\/instagram.com\/p\/t_iCt4rhXy\/","display_url":"instagram.com\/p\/t_iCt4rhXy\/","indices":[116,138]}],"user_mentions":[{"screen_name":"SourPatchKids","name":"Sour
+        Patch Kids","id":122480273,"id_str":"122480273","indices":[35,49]},{"screen_name":"WalkingDead_AMC","name":"The
+        Walking Dead AMC","id":65184105,"id_str":"65184105","indices":[50,66]},{"screen_name":"AsapSCIENCE","name":"AsapSCIENCE","id":592912724,"id_str":"592912724","indices":[67,79]},{"screen_name":"WeeklyChris","name":"Christian
+        Collins","id":125806240,"id_str":"125806240","indices":[80,92]},{"screen_name":"AndreaRussett","name":"Andrea
+        Russett","id":30495613,"id_str":"30495613","indices":[93,107]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"16121E","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/449347350306111489\/zWlAXsXf.png","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/449347350306111489\/zWlAXsXf.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/449344241752227841\/xJeF6VQn_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/449344241752227841\/xJeF6VQn_normal.png","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/238110322\/1411497387","profile_link_color":"E62E4C","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":false,"default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null}'
+    http_version: 
+  recorded_at: Sat, 11 Oct 2014 01:08:15 GMT
+recorded_with: VCR 2.9.3

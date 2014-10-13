@@ -1,0 +1,1 @@
+require 'net/twitter/models/user'

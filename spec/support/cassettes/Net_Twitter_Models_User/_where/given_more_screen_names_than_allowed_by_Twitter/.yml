@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/users/lookup.json?screen_name=aa,ab,ac,ad,ae,ba,bb,bc,bd,be,ca,cb,cc,cd,ce,da,db,dc,dd,de,ea,eb,ec,ed,ee,fa,fb,fc,fd,fe,ga,gb,gc,gd,ge,ha,hb,hc,hd,he,ia,ib,ic,id,ie,ja,jb,jc,jd,je,ka,kb,kc,kd,ke,la,lb,lc,ld,le,ma,mb,mc,md,me,na,nb,nc,nd,ne,oa,ob,oc,od,oe,pa,pb,pc,pd,pe,qa,qb,qc,qd,qe,ra,rb,rc,rd,re,sa,sb,sc,sd,se,ta,tb,tc,td,te,ua,ub,uc,ud,ue,va,vb,vc,vd,ve,wa,wb,wc,wd,we,xa,xb,xc,xd,xe,ya,yb,yc,yd,ye,za,zb,zc,zd,ze
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - ACCESS_TOKEN
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Length:
+      - '96'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 11 Oct 2014 01:08:23 UTC
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sat, 11 Oct 2014 01:08:23 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_a
+      Set-Cookie:
+      - guest_id=v1%3A141298970306646690; Domain=.twitter.com; Path=/; Expires=Mon,
+        10-Oct-2016 01:08:23 UTC
+      Status:
+      - 403 Forbidden
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read
+      X-Connection-Hash:
+      - 0d8ccb030862cf1cce28b1610c3fa4e7
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '60'
+      X-Rate-Limit-Remaining:
+      - '57'
+      X-Rate-Limit-Reset:
+      - '1412990602'
+      X-Transaction:
+      - d15812f189dc6314
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":18,"message":"Too many terms specified in query."}]}'
+    http_version: 
+  recorded_at: Sat, 11 Oct 2014 01:08:16 GMT
+recorded_with: VCR 2.9.3
