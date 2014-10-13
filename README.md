@@ -34,7 +34,7 @@ Available resources
 Net::Twitter::User
 -----------
 
-Use [Net::Account]() to:
+Use [Net::Twitter::User]() to:
 
 * retrieve a Twitter user by screen name
 * retrieve a list of Twitter users by screen names
