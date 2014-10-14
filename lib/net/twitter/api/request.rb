@@ -1,4 +1,5 @@
 require 'net/twitter/errors/response_error'
+require 'net/twitter/errors/missing_auth'
 require 'active_support'
 require 'active_support/core_ext'
 
@@ -100,6 +101,7 @@ module Net
         end
 
         def apps
+          raise Errors::MissingAuth if Net::Twitter.configuration.apps.empty?
           @@apps ||= Net::Twitter.configuration.apps.map do |app|
             app.tap{app[:limit_reset] = nil}
           end
