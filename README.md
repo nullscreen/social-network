@@ -1,15 +1,22 @@
 Net - a Ruby client for social networks API
 ===========================================
 
-Net helps you write apps that need to interact with Twitter.
+Net helps you write apps that need to interact with Twitter and Instagram.
 
 
-After [configuring your Twitter app](#configuring-your-app), you can run commands like:
+After [configuring your Twitter app](#configuring-your-twitter-app), you can run commands like:
 
 ```ruby
 user = Net::Twitter::User.find_by screen_name: 'fullscreen'
 user.screen_name #=> "Fullscreen"
 user.followers_count #=> 48_200
+```
+After [configuring your Instagram app](#configuring-your-instagram-app), you can run commands like:
+
+```ruby
+user = Net::Instagram::User.find_by username: 'fullscreen_inc'
+user.username #=> "fullscreen_inc"
+user.follower_count #=> 7025
 ```
 
 How to install
@@ -21,7 +28,7 @@ To install on your system, run
 
 To use inside a bundled Ruby project, add this line to the Gemfile:
 
-    gem 'net', '~> 0.1.0'
+    gem 'net', '~> 0.1.1'
 
 Since the gem follows [Semantic Versioning](http://semver.org),
 indicating the full version in your Gemfile (~> *major*.*minor*.*patch*)
@@ -32,7 +39,7 @@ Available resources
 ===================
 
 Net::Twitter::User
------------
+------------------
 
 Use [Net::Twitter::User]() to:
 
@@ -50,8 +57,24 @@ users.map(&:followers_count).sort #=> [12, 48_200]
 
 *The methods above require a configured Twitter app (see below).*
 
-Configuring your app
-====================
+Net::Instagram::User
+--------------------
+
+Use [Net::Instagram::User]() to:
+
+* retrieve an Instagram user by username
+* access the number of followers of an Instagram user
+* access the number of following of an Instagram user
+
+```ruby
+user = Net::Instagram::User.find_by username: 'fullscreen'
+user.follower_count #=> 7025
+```
+
+*The methods above require a configured Instagram app (see below).*
+
+Configuring your Twitter app
+============================
 
 In order to use Net you must create an app in the [Twitter Application Manager](https://apps.twitter.com/app/new).
 
@@ -87,6 +110,43 @@ end
 so use the approach that you prefer.
 If a variable is set in both places, then `Net::Twitter.configure` takes precedence.
 
+Configuring your Instagram app
+============================
+
+In order to use Net you must create an app in the
+[Instagram Client Manager](http://instagram.com/developer/clients/register).
+
+Once the app is created, copy the Client ID and add it to your
+code with the following snippet of code (replacing with your own client id)
+:
+
+```ruby
+Net::Instagram.configure do |config|
+  config.client_id = 'abcdefg'
+end
+```
+
+Configuring with environment variables
+--------------------------------------
+
+As an alternative to the approach above, you can configure your app with
+a variable. Setting the following environment variable:
+
+```bash
+export INSTAGRAM_CLIENT_ID='abcdefg'
+```
+
+is equivalent to configuring your app with the initializer:
+
+```ruby
+Net::Instagram.configure do |config|
+  config.client_id = 'abcdefg'
+end
+```
+
+so use the approach that you prefer.
+If a variable is set in both places, then `Net::Instagram.configure` takes precedence.
+
 How to test
 ===========
 
@@ -99,8 +159,8 @@ rspec
 Net uses [VCR](https://github.com/vcr/vcr) so by default tests do not run
 HTTP requests.
 
-If you need to run tests against the live Twitter API,
-[configure your Twitter app](#configuring-your-app) using environment variables,
+If you need to run tests against the live Twitter API or Instagram API,
+configure your [Twitter app](#configuring-your-twitter-app) or your [Instagram app](#configuring-your-instagram-app)  using environment variables,
 erase the cassettes, then run `rspec`.
 
 

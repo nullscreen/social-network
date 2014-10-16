@@ -9,3 +9,7 @@ For more information about changelogs, check
 ## 0.1.0 - 2014-10-13
 
 * Initial release with `Twitter::User` supporting `find_by`, `find_by!` and `where`.
+
+## 0.1.1 - 2014-10-16
+
+* [FEATURE] Add `Instagram::User` supporting `find_by` and `find_by!`.
