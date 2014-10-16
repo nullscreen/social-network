@@ -1,5 +1,7 @@
 require 'webmock/rspec'
 require 'vcr'
+require 'net/twitter'
+require 'net/instagram'
 
 VCR.configure do |c|
   c.configure_rspec_metadata!
@@ -7,6 +9,7 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.filter_sensitive_data('TWITTER_API_KEY') { Net::Twitter.configuration.apps.first[:key] }
   c.filter_sensitive_data('TWITTER_API_SECRET') { Net::Twitter.configuration.apps.first[:secret] }
+  c.filter_sensitive_data('INSTAGRAM_CLIENT_ID') { Net::Instagram.configuration.client_id }
   c.filter_sensitive_data('ACCESS_TOKEN') do |interaction|
     if interaction.request.headers['Authorization']
       interaction.request.headers['Authorization'].first
