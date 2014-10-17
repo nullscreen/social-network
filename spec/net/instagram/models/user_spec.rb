@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'net/instagram'
 
 describe Net::Instagram::User, :vcr do
   before :all do

@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'net/twitter'
 
 describe Net::Twitter::User, :vcr do
   let(:unknown_screen_name) { '09hlQHE29534awe' }

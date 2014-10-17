@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/search?client_id=CLIENT_ID&q=brohemian
+    uri: https://api.instagram.com/v1/users/search?client_id=INSTAGRAM_CLIENT_ID&q=brohemian
     body:
       encoding: US-ASCII
       string: ''
@@ -91,7 +91,7 @@ http_interactions:
   recorded_at: Wed, 15 Oct 2014 19:00:20 GMT
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/11590862?client_id=CLIENT_ID
+    uri: https://api.instagram.com/v1/users/11590862?client_id=INSTAGRAM_CLIENT_ID
     body:
       encoding: US-ASCII
       string: ''

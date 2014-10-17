@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/search?client_id=CLIENT_ID&q=Fullscreen
+    uri: https://api.instagram.com/v1/users/search?client_id=INSTAGRAM_CLIENT_ID&q=Fullscreen
     body:
       encoding: US-ASCII
       string: ''
@@ -95,7 +95,7 @@ http_interactions:
   recorded_at: Wed, 15 Oct 2014 18:47:43 GMT
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/41672819?client_id=CLIENT_ID
+    uri: https://api.instagram.com/v1/users/41672819?client_id=INSTAGRAM_CLIENT_ID
     body:
       encoding: US-ASCII
       string: ''

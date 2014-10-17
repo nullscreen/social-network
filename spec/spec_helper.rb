@@ -7,4 +7,5 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
 ]
 SimpleCov.start
 
+require 'net'
 Dir['./spec/support/**/*.rb'].each {|f| require f}
