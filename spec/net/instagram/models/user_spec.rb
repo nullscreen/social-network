@@ -28,12 +28,18 @@ describe Net::Instagram::User, :vcr do
 
     context 'given an unknown username' do
       let(:username) { unknown_username }
-      it { expect(user).to be_nil }
+
+      it 'returns nil' do
+        expect(user).to be_nil
+      end
     end
 
     context 'given a private username' do
       let(:username) { private_username }
-      it { expect(user).to be_nil }
+
+      it 'returns nil' do
+        expect(user).to be_nil
+      end
     end
   end
 
@@ -50,12 +56,18 @@ describe Net::Instagram::User, :vcr do
 
     context 'given an unknown username' do
       let(:username) { unknown_username }
-      it { expect{user}.to raise_error Net::Instagram::UnknownUser }
+
+      it 'raises an UnknownUser error' do
+        expect{user}.to raise_error Net::Instagram::UnknownUser
+      end
     end
 
     context 'given a private username' do
       let(:username) { private_username }
-      it { expect{user}.to raise_error Net::Instagram::PrivateUser }
+
+      it 'raises a PrivateUser error' do
+        expect{user}.to raise_error Net::Instagram::PrivateUser
+      end
     end
   end
 end

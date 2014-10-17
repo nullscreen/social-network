@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/search?client_id=CLIENT_ID&q=Fullscreen
+    uri: https://api.instagram.com/v1/users/search?client_id=INSTAGRAM_CLIENT_ID&q=Fullscreen
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 15 Oct 2014 18:47:43 GMT
+      - Fri, 17 Oct 2014 01:32:31 GMT
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Pragma:
@@ -34,16 +34,16 @@ http_interactions:
       - nginx
       Set-Cookie:
       - ccode=US; Path=/
-      - csrftoken=54dda07d4da8135980894d860d68c180; expires=Wed, 14-Oct-2015 18:47:43
+      - csrftoken=c0794f4c03b6a1b818191a260413302f; expires=Fri, 16-Oct-2015 01:32:31
         GMT; Max-Age=31449600; Path=/
       Vary:
       - Cookie, Accept-Language, Accept-Encoding
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4986'
+      - '4979'
       Content-Length:
-      - '2575'
+      - '2569'
       Connection:
       - keep-alive
     body:
@@ -53,7 +53,7 @@ http_interactions:
         De Luxe","id":"41672819"},{"username":"fullscreen_inc","bio":"The First Media
         Company for the Connected Generation.\n#PowerToTheCreators","website":"http:\/\/www.Fullscreen.com","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_270587948_75sq_1395968129.jpg","full_name":"Fullscreen","id":"270587948"},{"username":"leslawpajek","bio":"I''m
         a professional filmmaker, fan of Japan. My rules are simple: like 4 like,
-        (un)follow 4 (un)follow - unless you''re a spammer. LINE: cinemax","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/10608023_1517060581843308_1664621766_a.jpg","full_name":"IMAGiNE
+        (un)follow 4 (un)follow. LINE: cinemax, Snapchat: cinemax57","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/10608023_1517060581843308_1664621766_a.jpg","full_name":"IMAGiNE
         FiLMS","id":"2569886"},{"username":"fullscreenit","bio":"\u2600\ufe0f___________\ud83c\udfc3","website":"http:\/\/nelsonmelgar.com","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfa1\/10724219_787575974631882_2133138302_a.jpg","full_name":"Nelson
         Melgar","id":"416534668"},{"username":"fullscreenlamonsta","bio":"I am the
         leader of loyaltybeforeroyalty","website":"http:\/\/www.youtube.com\/lamonsta","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfp1\/10554139_663724567049450_1192667532_a.jpg","full_name":"Lamonsta","id":"1440026224"},{"username":"fullscreenmilo","bio":"","website":"","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xaf1\/10654909_270596979731099_1630051846_a.jpg","full_name":"Milo
@@ -92,10 +92,10 @@ http_interactions:
         me at jspade@fullscreen.net","website":"http:\/\/www.fullscreenvirals.net","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_917287093_75sq_1388780355.jpg","full_name":"Jason
         Spade","id":"917287093"},{"username":"fullscreen56","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1424209486"},{"username":"fullscreenproduction","bio":"","website":"http:\/\/www.fullscreen.hr","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1467498522"},{"username":"fullscreen71","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1498965524"},{"username":"fullscreendev","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1501212944"}]}'
     http_version: 
-  recorded_at: Wed, 15 Oct 2014 18:47:43 GMT
+  recorded_at: Fri, 17 Oct 2014 01:32:31 GMT
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/41672819?client_id=CLIENT_ID
+    uri: https://api.instagram.com/v1/users/41672819?client_id=INSTAGRAM_CLIENT_ID
     body:
       encoding: US-ASCII
       string: ''
@@ -118,7 +118,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 15 Oct 2014 18:47:43 GMT
+      - Fri, 17 Oct 2014 01:32:32 GMT
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Pragma:
@@ -127,23 +127,23 @@ http_interactions:
       - nginx
       Set-Cookie:
       - ccode=US; Path=/
-      - csrftoken=b6cf5fa2cd4a100c834cffb049cb74b0; expires=Wed, 14-Oct-2015 18:47:43
+      - csrftoken=880da48196aaf4887c8dfa8550f7141f; expires=Fri, 16-Oct-2015 01:32:32
         GMT; Max-Age=31449600; Path=/
       Vary:
       - Cookie, Accept-Language, Accept-Encoding
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4985'
+      - '4978'
       Content-Length:
-      - '237'
+      - '236'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: '{"meta":{"code":200},"data":{"username":"fullscreen","bio":"Let your
         dreams come true...","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_41672819_75sq_1390767340.jpg","full_name":"Kermit
-        De Luxe","counts":{"media":150,"followed_by":271,"follows":29},"id":"41672819"}}'
+        De Luxe","counts":{"media":150,"followed_by":270,"follows":29},"id":"41672819"}}'
     http_version: 
-  recorded_at: Wed, 15 Oct 2014 18:47:43 GMT
+  recorded_at: Fri, 17 Oct 2014 01:32:32 GMT
 recorded_with: VCR 2.9.3

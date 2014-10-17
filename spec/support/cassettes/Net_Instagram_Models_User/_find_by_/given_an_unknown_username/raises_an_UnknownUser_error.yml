@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/search?client_id=CLIENT_ID&q=01LjqweoojkjR
+    uri: https://api.instagram.com/v1/users/search?client_id=INSTAGRAM_CLIENT_ID&q=01LjqweoojkjR
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 15 Oct 2014 18:47:44 GMT
+      - Fri, 17 Oct 2014 01:32:34 GMT
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Pragma:
@@ -34,14 +34,14 @@ http_interactions:
       - nginx
       Set-Cookie:
       - ccode=US; Path=/
-      - csrftoken=59dcc4097f2adf2c1a7badc08f1f9e5b; expires=Wed, 14-Oct-2015 18:47:44
+      - csrftoken=ec2c70ce997193a599739c8e8c490e89; expires=Fri, 16-Oct-2015 01:32:34
         GMT; Max-Age=31449600; Path=/
       Vary:
       - Cookie, Accept-Language
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4984'
+      - '4972'
       Content-Length:
       - '49'
       Connection:
@@ -50,5 +50,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"meta":{"code":200},"data":[]}'
     http_version: 
-  recorded_at: Wed, 15 Oct 2014 18:47:44 GMT
+  recorded_at: Fri, 17 Oct 2014 01:32:34 GMT
 recorded_with: VCR 2.9.3
