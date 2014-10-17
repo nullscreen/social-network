@@ -25,7 +25,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 15 Oct 2014 18:58:27 GMT
+      - Fri, 17 Oct 2014 01:32:32 GMT
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Pragma:
@@ -34,7 +34,7 @@ http_interactions:
       - nginx
       Set-Cookie:
       - ccode=US; Path=/
-      - csrftoken=57c80233e6bc0b5d4d531e588e1e81a7; expires=Wed, 14-Oct-2015 18:58:27
+      - csrftoken=54c6e5c2931f87fbf2d931d1e83a17f0; expires=Fri, 16-Oct-2015 01:32:32
         GMT; Max-Age=31449600; Path=/
       Vary:
       - Cookie, Accept-Language, Accept-Encoding
@@ -43,7 +43,7 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '4976'
       Content-Length:
-      - '2422'
+      - '2426'
       Connection:
       - keep-alive
     body:
@@ -54,9 +54,9 @@ http_interactions:
         Tomlinson\r\n-you(;\r\n","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_11590862_75sq_1339895837.jpg","full_name":"\u272f
         ria mia bo-bia.","id":"11590862"},{"username":"brohemian.rhapsody","bio":"-homeschooled
         Highschool student\ud83c\udf43\n-maryland\u2728\n-Psalms 13:1-6\ud83c\udf3e\n-let''s
-        be friends\ud83d\udc4b","website":"https:\/\/m.youtube.com\/watch?v=crHqgShbhbQ","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xfa1\/10706972_501377809965567_570371482_a.jpg","full_name":"\u2600\ufe0fAnna
+        be friends\ud83d\udc4b","website":"https:\/\/m.youtube.com\/watch?v=crHqgShbhbQ","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/10725151_1499872903605168_1819681867_a.jpg","full_name":"\u2600\ufe0fAnna
         Marie\u2600\ufe0f","id":"274422186"},{"username":"rhapsodybrohemian","bio":"","website":"","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xaf1\/10724998_984982894861062_55867717_a.jpg","full_name":"Jenna
-        | \u264c\ufe0f","id":"243502445"},{"username":"brohemian_trapcity","bio":"Like
+        | \u264c\ufe0f\u2650\ufe0f","id":"243502445"},{"username":"brohemian_trapcity","bio":"Like
         a Phoenix, I have risen from the ashes. A fucking Phoenix who will fucking
         destroy all swords.\n\ud83d\udc26@mc_mikeymidz","website":"http:\/\/facebook.com\/mikeymarcotte","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xfa1\/10593392_1508155722753651_562376906_a.jpg","full_name":"Michael
         Justin Marcotte","id":"19518957"},{"username":"brohemianbenny","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_493333756_75sq_1399146544.jpg","full_name":"Benjamin
@@ -88,7 +88,7 @@ http_interactions:
         Hipster ","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_46765907_75sq_1335294703.jpg","full_name":"Taylor","id":"46765907"},{"username":"brohemiangraffiti","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"J
         Coble","id":"186572054"},{"username":"brohemian2013","bio":"","website":"http:\/\/m.youtube.com\/watch?v=hr08XNjD5iM","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_237177394_75sq_1350306447.jpg","full_name":"","id":"237177394"},{"username":"brohemianrhapsody","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"995420102"},{"username":"brohemianlovesong","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1399712728"}]}'
     http_version: 
-  recorded_at: Wed, 15 Oct 2014 18:58:27 GMT
+  recorded_at: Fri, 17 Oct 2014 01:32:32 GMT
 - request:
     method: get
     uri: https://api.instagram.com/v1/users/11590862?client_id=INSTAGRAM_CLIENT_ID
@@ -114,7 +114,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 15 Oct 2014 18:58:27 GMT
+      - Fri, 17 Oct 2014 01:32:33 GMT
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Pragma:
@@ -123,7 +123,7 @@ http_interactions:
       - nginx
       Set-Cookie:
       - ccode=US; Path=/
-      - csrftoken=6dff437c5e7c3f025037cad80203c400; expires=Wed, 14-Oct-2015 18:58:27
+      - csrftoken=abd6aa96ef43cc8cb46266c9946f57ef; expires=Fri, 16-Oct-2015 01:32:33
         GMT; Max-Age=31449600; Path=/
       Vary:
       - Cookie, Accept-Language
@@ -140,5 +140,5 @@ http_interactions:
       string: '{"meta":{"error_type":"APINotAllowedError","code":400,"error_message":"you
         cannot view this resource"}}'
     http_version: 
-  recorded_at: Wed, 15 Oct 2014 18:58:27 GMT
+  recorded_at: Fri, 17 Oct 2014 01:32:33 GMT
 recorded_with: VCR 2.9.3

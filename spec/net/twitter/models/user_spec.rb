@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'net/twitter'
 
 describe Net::Twitter::User, :vcr do
   let(:unknown_screen_name) { '09hlQHE29534awe' }
@@ -19,12 +20,18 @@ describe Net::Twitter::User, :vcr do
 
     context 'given an unknown screen name' do
       let(:screen_name) { unknown_screen_name }
-      it { expect(user).to be_nil }
+
+      it 'returns nil' do
+        expect(user).to be_nil
+      end
     end
 
     context 'given a suspended screen name' do
       let(:screen_name) { suspended_screen_name }
-      it { expect(user).to be_nil }
+
+      it 'returns nil' do
+        expect(user).to be_nil
+      end
     end
   end
 
@@ -42,12 +49,18 @@ describe Net::Twitter::User, :vcr do
 
     context 'given an unknown screen name' do
       let(:screen_name) { unknown_screen_name }
-      it { expect{user}.to raise_error Net::Twitter::UnknownUser }
+
+      it 'raises an UnknownUser error' do
+        expect{user}.to raise_error Net::Twitter::UnknownUser
+      end
     end
 
     context 'given a suspended screen name' do
       let(:screen_name) { suspended_screen_name }
-      it { expect{user}.to raise_error Net::Twitter::SuspendedUser }
+
+      it 'raises a SuspendedUser error' do
+        expect{user}.to raise_error Net::Twitter::SuspendedUser
+      end
     end
   end
 
@@ -76,13 +89,15 @@ describe Net::Twitter::User, :vcr do
       let(:screen_names) { ('a'..'z').map{|x| ('a'..'e').map{|y| "#{x}#{y}"}}.flatten }
       subject(:users) { Net::Twitter::User.where screen_name: screen_names }
 
-      it { expect{users}.to raise_error Net::Twitter::TooManyUsers }
+      it 'raises a TooManyUsers error' do
+        expect{users}.to raise_error Net::Twitter::TooManyUsers
+      end
     end
 
     # @see https://dev.twitter.com/rest/public/rate-limits
     context 'called more times than Twitter’s rate limit' do
 
-      before { expect(Time).to receive(:now).at_least(:once).and_return 12345678 }
+      #before { expect(Time).to receive(:now).at_least(:once).and_return 12345678 }
       let(:lookup_limit) { 60 }
       let(:screen_names) { [existing_screen_name] }
       subject(:user_sets) { (lookup_limit + 1).times.map do

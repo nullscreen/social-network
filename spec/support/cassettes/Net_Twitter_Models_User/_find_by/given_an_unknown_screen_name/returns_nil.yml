@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.twitter.com/1.1/users/show.json?screen_name=CodFatherLucas
+    uri: https://api.twitter.com/1.1/users/show.json?screen_name=09hlQHE29534awe
     body:
       encoding: US-ASCII
       string: ''
@@ -17,36 +17,36 @@ http_interactions:
       - ACCESS_TOKEN
   response:
     status:
-      code: 403
-      message: Forbidden
+      code: 404
+      message: Not Found
     headers:
       Cache-Control:
       - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
       Content-Length:
-      - '86'
+      - '92'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 11 Oct 2014 01:08:22 UTC
+      - Fri, 17 Oct 2014 01:32:35 UTC
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Sat, 11 Oct 2014 01:08:22 GMT
+      - Fri, 17 Oct 2014 01:32:35 GMT
       Pragma:
       - no-cache
       Server:
       - tsa_a
       Set-Cookie:
-      - guest_id=v1%3A141298970268472432; Domain=.twitter.com; Path=/; Expires=Mon,
-        10-Oct-2016 01:08:22 UTC
+      - guest_id=v1%3A141350955560850514; Domain=.twitter.com; Path=/; Expires=Sun,
+        16-Oct-2016 01:32:35 UTC
       Status:
-      - 403 Forbidden
+      - 404 Not Found
       Strict-Transport-Security:
       - max-age=631138519
       X-Access-Level:
       - read
       X-Connection-Hash:
-      - d5f954bca7a9b3a762c62153a96e442e
+      - df345528597337480749695a5064de9e
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -54,16 +54,16 @@ http_interactions:
       X-Rate-Limit-Limit:
       - '180'
       X-Rate-Limit-Remaining:
-      - '174'
+      - '178'
       X-Rate-Limit-Reset:
-      - '1412990602'
+      - '1413510455'
       X-Transaction:
-      - 5ec8678f24b910dd
+      - 07faff9a30ee8a43
       X-Xss-Protection:
       - 1; mode=block
     body:
       encoding: UTF-8
-      string: '{"errors":[{"code":63,"message":"User has been suspended."}]}'
+      string: '{"errors":[{"message":"Sorry, that page does not exist","code":34}]}'
     http_version: 
-  recorded_at: Sat, 11 Oct 2014 01:08:16 GMT
+  recorded_at: Fri, 17 Oct 2014 01:32:35 GMT
 recorded_with: VCR 2.9.3
