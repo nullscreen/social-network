@@ -9,7 +9,7 @@ After [configuring your Twitter app](#configuring-your-twitter-app), you can run
 ```ruby
 user = Net::Twitter::User.find_by screen_name: 'fullscreen'
 user.screen_name #=> "Fullscreen"
-user.followers_count #=> 48_200
+user.follower_count #=> 48_200
 ```
 After [configuring your Instagram app](#configuring-your-instagram-app), you can run commands like:
 
@@ -49,10 +49,10 @@ Use [Net::Twitter::User]() to:
 
 ```ruby
 user = Net::Twitter::User.find_by screen_name: 'fullscreen'
-user.followers_count #=> 48_200
+user.follower_count #=> 48_200
 
 users = Net::Twitter::User.where screen_name: ['fullscreen', 'brohemian6']
-users.map(&:followers_count).sort #=> [12, 48_200]
+users.map(&:follower_count).sort #=> [12, 48_200]
 ```
 
 *The methods above require a configured Twitter app (see below).*
