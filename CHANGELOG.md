@@ -22,3 +22,7 @@ If your code never calls the `followers_count` method on a `Twitter::User`, then
 If it does, then replace your calls to `followers_count` with `follower_count` (singular).
 
 * [ENHANCEMENT] Use the same `follower_count` name both for Twitter and Instagram users
+
+## 0.2.1 - 2014-10-20
+
+* [ENHANCEMENT] Requiring 'net' auto-loads Net::Twitter and Net::Instagram
