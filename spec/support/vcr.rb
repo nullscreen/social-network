@@ -1,7 +1,5 @@
 require 'webmock/rspec'
 require 'vcr'
-require 'net/twitter'
-require 'net/instagram'
 
 VCR.configure do |c|
   c.configure_rspec_metadata!
