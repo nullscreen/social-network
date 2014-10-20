@@ -5,10 +5,11 @@ module Net
   module Twitter
     module Models
       class User
-        attr_reader :screen_name, :followers_count
+        attr_reader :screen_name, :follower_count
 
         def initialize(attrs = {})
           attrs.each{|k, v| instance_variable_set("@#{k}", v) unless v.nil?}
+          @follower_count = attrs['followers_count']
         end
 
         # Returns the existing Twitter user matching the provided attributes or

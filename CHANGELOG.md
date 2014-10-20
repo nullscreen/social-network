@@ -13,3 +13,12 @@ For more information about changelogs, check
 ## 0.1.1 - 2014-10-16
 
 * [FEATURE] Add `Instagram::User` supporting `find_by` and `find_by!`.
+
+## 0.2.0 - 2014-10-20
+
+**How to upgrade**
+
+If your code never calls the `followers_count` method on a `Twitter::User`, then you are good to go.
+If it does, then replace your calls to `followers_count` with `follower_count` (singular).
+
+* [ENHANCEMENT] Use the same `follower_count` name both for Twitter and Instagram users

@@ -14,7 +14,7 @@ describe Net::Twitter::User, :vcr do
 
       it 'returns an object representing that user' do
         expect(user.screen_name).to eq 'Fullscreen'
-        expect(user.followers_count).to be_an Integer
+        expect(user.follower_count).to be_an Integer
       end
     end
 
@@ -37,7 +37,7 @@ describe Net::Twitter::User, :vcr do
 
       it 'returns an object representing that user' do
         expect(user.screen_name).to eq 'Fullscreen'
-        expect(user.followers_count).to be_an Integer
+        expect(user.follower_count).to be_an Integer
       end
     end
 
@@ -59,7 +59,7 @@ describe Net::Twitter::User, :vcr do
 
       it 'returns an array of objects representing those users' do
         expect(users.map &:screen_name).to contain_exactly('Fullscreen', 'brohemian6')
-        expect(users.map &:followers_count).to all(be_an Integer)
+        expect(users.map &:follower_count).to all(be_an Integer)
       end
     end
 
