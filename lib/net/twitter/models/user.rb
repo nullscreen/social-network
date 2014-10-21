@@ -1,5 +1,5 @@
 require 'net/twitter/api/request'
-require 'net/twitter/errors'
+require 'net/twitter/errors/response_error'
 
 module Net
   module Twitter
@@ -22,7 +22,7 @@ module Net
         #   (case-insensitive).
         def self.find_by(params = {})
           find_by! params
-        rescue Errors::UnknownUser, Errors::SuspendedUser
+        rescue Net::HTTPServerException
           nil
         end
 
@@ -33,16 +33,15 @@ module Net
         # @param [Hash] params the attributes to find a user by.
         # @option params [String] :screen_name The Twitter user’s screen name
         #   (case-insensitive).
-        # @raise [Net::Errors::UnknownUser] if the user cannot be found.
-        # @raise [Net::Errors::SuspendedUser] if the user account is suspended.
+        # @raise [Net::HTTPServerException 404 "Not Found"] if the user cannot be found.
+        # @raise [Net::HTTPServerException 403 "Forbidden"] if the user account is suspended.
         def self.find_by!(params = {})
           request = Api::Request.new endpoint: 'users/show', params: params
           user_data = request.run
           new user_data
         rescue Errors::ResponseError => error
-          case error.response
-            when Net::HTTPNotFound then raise Errors::UnknownUser
-            when Net::HTTPForbidden then raise Errors::SuspendedUser
+          if error.response.class == Net::HTTPNotFound || error.response.class == Net::HTTPForbidden
+            raise error.response.value
           end
         end
 
