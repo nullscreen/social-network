@@ -27,18 +27,18 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 11 Oct 2014 01:08:22 UTC
+      - Tue, 21 Oct 2014 01:59:35 UTC
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Sat, 11 Oct 2014 01:08:22 GMT
+      - Tue, 21 Oct 2014 01:59:35 GMT
       Pragma:
       - no-cache
       Server:
       - tsa_a
       Set-Cookie:
-      - guest_id=v1%3A141298970220021935; Domain=.twitter.com; Path=/; Expires=Mon,
-        10-Oct-2016 01:08:22 UTC
+      - guest_id=v1%3A141385677580977171; Domain=.twitter.com; Path=/; Expires=Thu,
+        20-Oct-2016 01:59:35 UTC
       Status:
       - 404 Not Found
       Strict-Transport-Security:
@@ -46,7 +46,7 @@ http_interactions:
       X-Access-Level:
       - read
       X-Connection-Hash:
-      - 278156e7b09f629df55ab8d5cf289b58
+      - 9d52d89e7e9c5f0b469e0175fdf7815c
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -54,16 +54,16 @@ http_interactions:
       X-Rate-Limit-Limit:
       - '180'
       X-Rate-Limit-Remaining:
-      - '178'
+      - '167'
       X-Rate-Limit-Reset:
-      - '1412990602'
+      - '1413857252'
       X-Transaction:
-      - 2b2b1106b457ce4a
+      - 307bb075efdb886d
       X-Xss-Protection:
       - 1; mode=block
     body:
       encoding: UTF-8
       string: '{"errors":[{"message":"Sorry, that page does not exist","code":34}]}'
     http_version: 
-  recorded_at: Sat, 11 Oct 2014 01:08:15 GMT
+  recorded_at: Tue, 21 Oct 2014 01:59:35 GMT
 recorded_with: VCR 2.9.3

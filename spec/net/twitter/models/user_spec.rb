@@ -43,12 +43,12 @@ describe Net::Twitter::User, :vcr do
 
     context 'given an unknown screen name' do
       let(:screen_name) { unknown_screen_name }
-      it { expect{user}.to raise_error Net::Twitter::UnknownUser }
+      it { expect{user}.to raise_error Net::HTTPServerException }
     end
 
     context 'given a suspended screen name' do
       let(:screen_name) { suspended_screen_name }
-      it { expect{user}.to raise_error Net::Twitter::SuspendedUser }
+      it { expect{user}.to raise_error Net::HTTPServerException }
     end
   end
 
