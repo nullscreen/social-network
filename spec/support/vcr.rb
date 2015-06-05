@@ -8,11 +8,17 @@ VCR.configure do |c|
   c.filter_sensitive_data('TWITTER_API_KEY') { Net::Twitter.configuration.apps.first[:key] }
   c.filter_sensitive_data('TWITTER_API_SECRET') { Net::Twitter.configuration.apps.first[:secret] }
   c.filter_sensitive_data('INSTAGRAM_CLIENT_ID') { Net::Instagram.configuration.client_id }
+  c.filter_sensitive_data('FACEBOOK_CLIENT_ID') { Net::Facebook.configuration.client_id }
+  c.filter_sensitive_data('FACEBOOK_CLIENT_SECRET') { Net::Facebook.configuration.client_secret }
   c.filter_sensitive_data('ACCESS_TOKEN') do |interaction|
     if interaction.request.headers['Authorization']
       interaction.request.headers['Authorization'].first
     else
-      JSON(interaction.response.body)['access_token']
+      begin
+        JSON(interaction.response.body)['access_token']
+      rescue
+        interaction.response.body.slice!('access_token=')
+      end
     end
   end
   c.filter_sensitive_data(12345678) do |interaction|
