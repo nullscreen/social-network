@@ -10,12 +10,11 @@ module Net
           @host = 'graph.facebook.com'
           @params = attrs[:params] if attrs[:params]
           @path = attrs.fetch :path, "/v2.3/#{@params}"
-          @block = attrs.fetch :block, -> (request) {add_access_token! request}
+          @block = attrs.fetch :block, -> (request) {add_access_token!}
           @method = attrs.fetch :method, :get
         end
 
         def run(options={})
-          print "#{as_curl}\n"
           case response = run_http_request
           when Net::HTTPOK
             options[:auth] ? response.body : JSON.parse(response.body)
@@ -42,7 +41,7 @@ module Net
           @uri ||= URI::HTTPS.build host: @host, path: @path, query: @query
         end
 
-        def add_access_token!(request)
+        def add_access_token!
           @token ||= access_token
           @uri.request_uri << "?#{@token}"
         end
