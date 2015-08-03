@@ -11,13 +11,11 @@ VCR.configure do |c|
   c.filter_sensitive_data('FACEBOOK_CLIENT_ID') { Net::Facebook.configuration.client_id }
   c.filter_sensitive_data('FACEBOOK_CLIENT_SECRET') { Net::Facebook.configuration.client_secret }
   c.filter_sensitive_data('ACCESS_TOKEN') do |interaction|
-    if interaction.request.headers['Authorization']
-      interaction.request.headers['Authorization'].first
-    else
-      begin
+    if interaction.request.uri.include? "twitter"
+      if interaction.request.headers['Authorization']
+        interaction.request.headers['Authorization'].first
+      else
         JSON(interaction.response.body)['access_token']
-      rescue
-        interaction.response.body.slice!('access_token=')
       end
     end
   end
@@ -26,4 +24,5 @@ VCR.configure do |c|
       interaction.response.headers['X-Rate-Limit-Reset'].first
     end
   end
+  c.ignore_hosts 'graph.facebook.com'
 end

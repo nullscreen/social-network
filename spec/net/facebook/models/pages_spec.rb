@@ -1,7 +1,6 @@
 require 'spec_helper'
-require 'net/twitter'
 
-describe Net::Facebook::Page, :vcr do
+describe Net::Facebook::Page do
   let(:unknown_username) { 'qeqwe09qlkmhkjh' }
   let(:existing_username) { 'Fullscreeninc' }
 
