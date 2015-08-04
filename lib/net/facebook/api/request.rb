@@ -8,16 +8,15 @@ module Net
       class Request
         def initialize(attrs = {})
           @host = 'graph.facebook.com'
-          @params = attrs[:params] if attrs[:params]
-          @path = attrs.fetch :path, "/v2.3/#{@params}"
-          @block = attrs.fetch :block, -> (request) {add_access_token!}
+          @query = attrs[:params] if attrs[:params]
+          @path = attrs.fetch :path, "/v2.3/#{@query}"
           @method = attrs.fetch :method, :get
         end
 
-        def run(options={})
+        def run
           case response = run_http_request
           when Net::HTTPOK
-            options[:auth] ? response.body : JSON.parse(response.body)
+            JSON.parse(response.body)
           else
             raise Errors::ResponseError, response
           end
@@ -32,35 +31,17 @@ module Net
 
         def http_request
           http_class = "Net::HTTP::#{@method.capitalize}".constantize
-          @http_request ||= http_class.new(uri.request_uri).tap do |request|
-            @block.call request
-          end
+          @http_request ||= http_class.new(uri.request_uri)
         end
 
         def uri
-          @uri ||= URI::HTTPS.build host: @host, path: @path, query: @query
+          @uri ||= URI::HTTPS.build host: @host, path: @path, query: query
         end
 
-        def add_access_token!
-          @token ||= access_token
-          @uri.request_uri << "?#{@token}"
-        end
-
-        def access_token
-          @@access_token ||= fetch_access_token
-        end
-
-        def fetch_access_token
-          path = '/oauth/access_token'
-          block = -> (request) {add_client_credentials! request}
-          request = Request.new path: path, method: :post, block: block
-          authentication_data = request.run auth: true
-        # rescue Errors::Suspended
-        #   require 'pry'; binding.pry; true;
-        end
-
-        def add_client_credentials!(request)
-          request.set_form_data client_id: Net::Facebook.configuration.client_id, client_secret: Net::Facebook.configuration.client_secret, grant_type: 'client_credentials'
+        def query
+          {}.tap do |query|
+            query.merge! access_token: "#{Net::Facebook.configuration.client_id}|#{Net::Facebook.configuration.client_secret}"
+          end.to_param
         end
 
         def as_curl
