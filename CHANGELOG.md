@@ -26,3 +26,7 @@ If it does, then replace your calls to `followers_count` with `follower_count` (
 ## 0.2.1 - 2014-10-20
 
 * [ENHANCEMENT] Requiring 'net' auto-loads Net::Twitter and Net::Instagram
+
+## 0.2.2 - 2015-08-04
+
+* [FEATURE] Add `Facebook::Page` supporting `find_by` and `find_by!`.

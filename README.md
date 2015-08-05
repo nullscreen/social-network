@@ -1,7 +1,7 @@
 Net - a Ruby client for social networks API
 ===========================================
 
-Net helps you write apps that need to interact with Twitter and Instagram.
+Net helps you write apps that need to interact with Twitter, Instagram and Facebook.
 
 
 After [configuring your Twitter app](#configuring-your-twitter-app), you can run commands like:
@@ -17,6 +17,14 @@ After [configuring your Instagram app](#configuring-your-instagram-app), you can
 user = Net::Instagram::User.find_by username: 'fullscreen_inc'
 user.username #=> "fullscreen_inc"
 user.follower_count #=> 7025
+```
+
+After [configuring your Facebook app](#configuring-your-facebook-app), you can run commands like:
+
+```ruby
+page = Net::Facebook::Page.find_by username: 'fullscreeninc'
+page.username #=> "fullscreeninc"
+page.likes #=> 30094
 ```
 
 How to install
@@ -72,6 +80,21 @@ user.follower_count #=> 7025
 ```
 
 *The methods above require a configured Instagram app (see below).*
+
+Net::Facebook::Page
+--------------------
+
+Use [Net::Facebook::Page]() to:
+
+* retrieve a Facebook page by username
+* access the number of likes of a Facebook user
+
+```ruby
+page = Net::Facebook::Page.find_by username: 'fullscreeninc'
+page.likes #=> 7025
+```
+
+*The methods above require a configured Facebook app (see below).*
 
 Configuring your Twitter app
 ============================
@@ -146,6 +169,45 @@ end
 
 so use the approach that you prefer.
 If a variable is set in both places, then `Net::Instagram.configure` takes precedence.
+
+Configuring your Facebook app
+============================
+
+In order to use Net you must create an app in the [Facebook Application Manager](https://developers.facebook.com/apps/).
+
+Once the app is created, copy the API key and secret and add them to your
+code with the following snippet of code (replacing with your own key and secret)
+:
+
+```ruby
+Net::Facebook.configure do |config|
+  config.client_id = 'abcdefg'
+  config.client_secret = 'abcdefg'
+end
+```
+
+Configuring with environment variables
+--------------------------------------
+
+As an alternative to the approach above, you can configure your app with
+variables. Setting the following environment variables:
+
+```bash
+export FACEBOOK_CLIENT_ID='abcd'
+export FACEBOOK_CLIENT_SECRET='efgh'
+```
+
+is equivalent to configuring your app with the initializer:
+
+```ruby
+Net::Facebook.configure do |config|
+  config.client_id = 'abcd'
+  config.client_secret = 'efgh'
+end
+```
+
+so use the approach that you prefer.
+If a variable is set in both places, then `Net::Facebook.configure` takes precedence.
 
 How to test
 ===========

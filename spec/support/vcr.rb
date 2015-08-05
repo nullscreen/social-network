@@ -20,4 +20,5 @@ VCR.configure do |c|
       interaction.response.headers['X-Rate-Limit-Reset'].first
     end
   end
+  c.ignore_hosts 'graph.facebook.com'
 end
