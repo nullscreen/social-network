@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/search?client_id=CLIENT_ID&q=brohemian
+    uri: https://api.instagram.com/v1/users/search?client_id=INSTAGRAM_CLIENT_ID&q=qz_privacy_test
     body:
       encoding: US-ASCII
       string: ''
@@ -18,80 +18,40 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
+      X-Ratelimit-Remaining:
+      - '4990'
       Content-Language:
       - en
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 15 Oct 2014 19:00:20 GMT
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - nginx
-      Set-Cookie:
-      - ccode=US; Path=/
-      - csrftoken=5e23a2f602e27a1e839305a59d1075fa; expires=Wed, 14-Oct-2015 19:00:20
-        GMT; Max-Age=31449600; Path=/
       Vary:
       - Cookie, Accept-Language, Accept-Encoding
       X-Ratelimit-Limit:
       - '5000'
-      X-Ratelimit-Remaining:
-      - '4971'
-      Content-Length:
-      - '2422'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 05 Aug 2015 22:17:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=2abe346f912d91279491474a9f7d9a1a; expires=Wed, 03-Aug-2016 22:17:15
+        GMT; Max-Age=31449600; Path=/
       Connection:
       - keep-alive
+      Content-Length:
+      - '192'
     body:
       encoding: UTF-8
-      string: '{"meta":{"code":200},"data":[{"username":"brohemian","bio":"\u044f\u03c3\u0443\u03b1\u2113\u0442\u0443;
-        \u0454\u0455\u0442. \u00b9\u2079\u2079\u2076\r\n\r\nPeople allowed to have
-        my babies:\r\n-Christofer Drew\r\n-Alex Gaskarth\r\n-Tom Higgenson\r\n-Louis
-        Tomlinson\r\n-you(;\r\n","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_11590862_75sq_1339895837.jpg","full_name":"\u272f
-        ria mia bo-bia.","id":"11590862"},{"username":"brohemian.rhapsody","bio":"-homeschooled
-        Highschool student\ud83c\udf43\n-maryland\u2728\n-Psalms 13:1-6\ud83c\udf3e\n-let''s
-        be friends\ud83d\udc4b","website":"https:\/\/m.youtube.com\/watch?v=crHqgShbhbQ","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xfa1\/10706972_501377809965567_570371482_a.jpg","full_name":"\u2600\ufe0fAnna
-        Marie\u2600\ufe0f","id":"274422186"},{"username":"rhapsodybrohemian","bio":"","website":"","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xaf1\/10724998_984982894861062_55867717_a.jpg","full_name":"Jenna
-        | \u264c\ufe0f","id":"243502445"},{"username":"brohemian_trapcity","bio":"Like
-        a Phoenix, I have risen from the ashes. A fucking Phoenix who will fucking
-        destroy all swords.\n\ud83d\udc26@mc_mikeymidz","website":"http:\/\/facebook.com\/mikeymarcotte","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xfa1\/10593392_1508155722753651_562376906_a.jpg","full_name":"Michael
-        Justin Marcotte","id":"19518957"},{"username":"brohemianbenny","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_493333756_75sq_1399146544.jpg","full_name":"Benjamin
-        Collins","id":"493333756"},{"username":"_brohemianrhapsodyy","bio":"My heart
-        just wouldn''t be in it, you know? Haven''t got one. | \ud83d\udc99 Electric
-        Blue R53 MINI Cooper S. \ud83d\udc99 \ud83d\udc01","website":"http:\/\/twitter.com\/xOhaiGinna","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xaf1\/10005468_697832380292495_945252116_a.jpg","full_name":"Ginna
-        Elizabeth \u2693","id":"23594063"},{"username":"brohemian_rhapsody64","bio":"Twitter
-        @Scottie_B_64","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfp1\/10499178_336136809867484_217588539_a.jpg","full_name":"Scottie","id":"1337874941"},{"username":"brohemian_m5","bio":"I
-        love beer, watching blade, and going to sleep.","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_333965545_75sq_1388945917.jpg","full_name":"Richard","id":"333965545"},{"username":"brohemianraspady","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_288397402_75sq_1394052597.jpg","full_name":"","id":"288397402"},{"username":"brohemianthefizifth","bio":"Did
-        you touch my drum set?!","website":"","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xfa1\/10597478_515479898585277_389014150_a.jpg","full_name":"Joe
-        Harris","id":"1478459315"},{"username":"brohemianraphsody","bio":"","website":"","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xpf1\/10560929_690142464388169_1414415525_a.jpg","full_name":"Brett
-        Wion","id":"289684838"},{"username":"brohemian_trapsody","bio":"Uncw\ud83c\udf0a\u2600\ufe0f
-        || video games\ud83d\udc7e\ud83c\udfae || emojis \ud83d\ude04\ud83d\udc34\ud83d\udc11\ud83d\udc12\ud83d\udc7b\ud83c\udf85\ud83d\ude1a\ud83d\udca8","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfp1\/10499160_507018519443636_1389539206_a.jpg","full_name":"","id":"176878551"},{"username":"brohemian6","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_250637187_75sq_1352593302.jpg","full_name":"Jeremy
-        Cohen Hoffing","id":"250637187"},{"username":"techboy0106","bio":"\ud83d\udcbdQueen
-        Is Best\ud83d\udcbd\n\ud83c\udf42\u699b \u683c\u96f7\u65af\ud83c\udf42\n\u231a\ufe0fTF2
-        Is The Game\ud83d\udd2b\n\u26bd\ufe0fSoccer Is Fun\u26bd\ufe0f\n\ud83d\udcfaMinecraft?\ud83d\udcfa","website":"http:\/\/youtu.be\/aqeVxxMosMI","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xaf1\/10727568_545091692288557_1563289922_a.jpg","full_name":"","id":"411020917"},{"username":"brohemian84","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_945186240_75sq_1389150725.jpg","full_name":"James","id":"945186240"},{"username":"brohemian_dabsody","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_33596966_75sq_1376842047.jpg","full_name":"Nate
-        James Tamagne","id":"33596966"},{"username":"brohemian_han_brolo","bio":"Its
-        always fun time YAY!","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_315334217_75sq_1361859659.jpg","full_name":"King","id":"315334217"},{"username":"thebrohemian","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_375113188_75sq_1370153917.jpg","full_name":"The
-        Brohemian","id":"375113188"},{"username":"brohemianrhapsody01","bio":"","website":"","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xaf1\/10666056_1466687220270622_1561271059_a.jpg","full_name":"Connor-
-        Blackman","id":"1493141422"},{"username":"brohemiam_rhapsodys","bio":"My anaconda
-        don''t\n**SMHS** E- what? Eagles!**\nKik - MonsterByonix\n14 and Swaggy","website":"","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xaf1\/10632025_1493107157607493_555180944_a.jpg","full_name":"Angel
-        Janveaux","id":"1496775347"},{"username":"brohemian88","bio":"Never look back
-        unless you are planning to go that way.","website":"","profile_picture":"http:\/\/scontent-a.cdninstagram.com\/hphotos-xpa1\/outbound-distillery\/l\/t0.0-20\/OBPTH\/profiles\/profile_640357419_75sq_1383951300.jpg","full_name":"Nick
-        Perry","id":"640357419"},{"username":"brohemians","bio":"Hacemos Fotos y Videitos.","website":"http:\/\/www.brohemians.cloudvent.net","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_505400720_75sq_1376326054.jpg","full_name":"brohemians","id":"505400720"},{"username":"brohemian__","bio":"Claire
-        Noel Elliott \u2764\r\nI love taking and looking at pictures. ","website":"http:\/\/l-o-v-everyone.tumblr.com\/","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_21311496_75sq_1327781095.jpg","full_name":"Keep
-        Calm \u2654","id":"21311496"},{"username":"brohemian_rhapsody","bio":"New
-        to this instagram business...","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_21486826_75sq_1327878545.jpg","full_name":"Akasha","id":"21486826"},{"username":"bro_hemian","bio":"I''m
-        the third worst person in the entire world, fancy being terrible with me?\r\nWriter|Musician|Part-time
-        Hipster ","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_46765907_75sq_1335294703.jpg","full_name":"Taylor","id":"46765907"},{"username":"brohemiangraffiti","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"J
-        Coble","id":"186572054"},{"username":"brohemian2013","bio":"","website":"http:\/\/m.youtube.com\/watch?v=hr08XNjD5iM","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_237177394_75sq_1350306447.jpg","full_name":"","id":"237177394"},{"username":"brohemianrhapsody","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"995420102"},{"username":"brohemianlovesong","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1399712728"}]}'
+      string: '{"meta":{"code":200},"data":[{"username":"qz_privacy_test2","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"1643312009","full_name":""},{"username":"qz_privacy_test","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"1640440401","full_name":"Privacy
+        Test"}]}'
     http_version: 
-  recorded_at: Wed, 15 Oct 2014 19:00:20 GMT
+  recorded_at: Wed, 05 Aug 2015 22:17:15 GMT
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/11590862?client_id=CLIENT_ID
+    uri: https://api.instagram.com/v1/users/1640440401?client_id=INSTAGRAM_CLIENT_ID
     body:
       encoding: US-ASCII
       string: ''
@@ -107,38 +67,35 @@ http_interactions:
       code: 400
       message: BAD REQUEST
     headers:
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
+      X-Ratelimit-Remaining:
+      - '4989'
       Content-Language:
       - en
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 15 Oct 2014 19:00:20 GMT
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - nginx
-      Set-Cookie:
-      - ccode=US; Path=/
-      - csrftoken=e60c15214d50b5a4a547846da7c2858e; expires=Wed, 14-Oct-2015 19:00:20
-        GMT; Max-Age=31449600; Path=/
       Vary:
       - Cookie, Accept-Language
       X-Ratelimit-Limit:
       - '5000'
-      X-Ratelimit-Remaining:
-      - '4970'
-      Content-Length:
-      - '103'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 05 Aug 2015 22:17:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=bc5e22de7e179b933aca9e921ef631df; expires=Wed, 03-Aug-2016 22:17:15
+        GMT; Max-Age=31449600; Path=/
       Connection:
       - keep-alive
+      Content-Length:
+      - '103'
     body:
       encoding: UTF-8
       string: '{"meta":{"error_type":"APINotAllowedError","code":400,"error_message":"you
         cannot view this resource"}}'
     http_version: 
-  recorded_at: Wed, 15 Oct 2014 19:00:20 GMT
+  recorded_at: Wed, 05 Aug 2015 22:17:15 GMT
 recorded_with: VCR 2.9.3

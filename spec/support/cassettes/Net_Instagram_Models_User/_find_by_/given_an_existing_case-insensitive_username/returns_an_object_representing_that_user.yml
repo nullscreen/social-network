@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/search?client_id=CLIENT_ID&q=Fullscreen
+    uri: https://api.instagram.com/v1/users/search?client_id=INSTAGRAM_CLIENT_ID&q=Fullscreen
     body:
       encoding: US-ASCII
       string: ''
@@ -18,84 +18,61 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
+      X-Ratelimit-Remaining:
+      - '4993'
       Content-Language:
       - en
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 15 Oct 2014 18:58:27 GMT
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - nginx
-      Set-Cookie:
-      - ccode=US; Path=/
-      - csrftoken=48db9e9d294ac7a1660e9506dbd787be; expires=Wed, 14-Oct-2015 18:58:27
-        GMT; Max-Age=31449600; Path=/
       Vary:
       - Cookie, Accept-Language, Accept-Encoding
       X-Ratelimit-Limit:
       - '5000'
-      X-Ratelimit-Remaining:
-      - '4974'
-      Content-Length:
-      - '2575'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 05 Aug 2015 22:17:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=a5c55baf576d3a02789cf74b953ec3b1; expires=Wed, 03-Aug-2016 22:17:14
+        GMT; Max-Age=31449600; Path=/
       Connection:
       - keep-alive
+      Content-Length:
+      - '2037'
     body:
       encoding: UTF-8
-      string: '{"meta":{"code":200},"data":[{"username":"fullscreen","bio":"Let your
-        dreams come true...","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_41672819_75sq_1390767340.jpg","full_name":"Kermit
-        De Luxe","id":"41672819"},{"username":"fullscreen_inc","bio":"The First Media
-        Company for the Connected Generation.\n#PowerToTheCreators","website":"http:\/\/www.Fullscreen.com","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_270587948_75sq_1395968129.jpg","full_name":"Fullscreen","id":"270587948"},{"username":"leslawpajek","bio":"I''m
-        a professional filmmaker, fan of Japan. My rules are simple: like 4 like,
-        (un)follow 4 (un)follow - unless you''re a spammer. LINE: cinemax","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/10608023_1517060581843308_1664621766_a.jpg","full_name":"IMAGiNE
-        FiLMS","id":"2569886"},{"username":"fullscreenit","bio":"\u2600\ufe0f___________\ud83c\udfc3","website":"http:\/\/nelsonmelgar.com","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfa1\/10724219_787575974631882_2133138302_a.jpg","full_name":"Nelson
-        Melgar","id":"416534668"},{"username":"fullscreenlamonsta","bio":"I am the
-        leader of loyaltybeforeroyalty","website":"http:\/\/www.youtube.com\/lamonsta","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfp1\/10554139_663724567049450_1192667532_a.jpg","full_name":"Lamonsta","id":"1440026224"},{"username":"fullscreenmilo","bio":"","website":"","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xaf1\/10654909_270596979731099_1630051846_a.jpg","full_name":"Milo
-        Cruz","id":"247576002"},{"username":"fullscreentrish","bio":"Community Manager
-        @Fullscreen. Film junkie. Concert addict. Wannabe chef. Taking photos whenever,
-        wherever!","website":"http:\/\/fullscreen.net","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xaf1\/1724340_283066951879076_826800923_a.jpg","full_name":"Trish","id":"1501092156"},{"username":"ryuzakikamikaze","bio":"Fala
-        a\u00ed pessoas bunitas aqui e o ryuzaki e desta vez n\u00f3s estamos agr
-        no instagram :3","website":"http:\/\/www.youtube.com\/user\/leryuzakikamikaze","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/10644089_823364024349380_1950878469_a.jpg","full_name":"J\u00e3o|
-        fullscreen","id":"1477538401"},{"username":"poyfullscreenpt","bio":"My name
-        is Poy thank you to follow me and like \u003c3 \u003c3","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_17204081_75sq_1385859044.jpg","full_name":"PoyPu
-        Fullscreen Band","id":"17204081"},{"username":"fullscreenofficial","bio":"Full
-        Screen is an Italian DJ duo.\nBooking: fullskr33n@gmail.com","website":"https:\/\/www.facebook.com\/fullscr33n\/","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_473416451_75sq_1374314343.jpg","full_name":"Full
-        Screen","id":"473416451"},{"username":"fullscreen_krit","bio":"","website":"","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/10684183_322099684629832_1430692670_a.jpg","full_name":"|TGN|
-        PARTNER IN CRIME","id":"1225819888"},{"username":"fullscreen1","bio":"\u05e6\u05d9\u05dc\u05d5\u05dd
-        \u05d5\u05e2\u05e8\u05d9\u05db\u05d4 - \u05d0\u05d9\u05e8\u05d5\u05e2\u05d9\u05dd,
-        \u05d0\u05d5\u05e4\u05e0\u05d4, \u05e7\u05dc\u05d9\u05e4\u05d9\u05dd, \u05ea\u05d3\u05de\u05d9\u05ea.
-        054-9387219","website":"https:\/\/www.facebook.com\/fullscreen1","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_37075703_75sq_1388684550.jpg","full_name":"\u05de\u05e1\u05da
-        \u05de\u05dc\u05d0","id":"37075703"},{"username":"hd_fullscreen_gaming","bio":"Life
-        Account: david_frm_statefarm\n*COD\n*FIFA\n*SPORTS\n*MINECRAFT\n*XBOXONE\n*PS4","website":"","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xpf1\/10553969_1529050753973467_135987297_a.jpg","full_name":"Gaming
-        Account","id":"1450067292"},{"username":"bmx_fullscreen","bio":"DM ME BACK
-        UP ACCOUNT FOR @bike_life1330\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47\ud83d\udc47","website":"http:\/\/instagram.com\/bike_life1330","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xap1\/10401855_472048132931903_1216185133_a.jpg","full_name":"\ud83d\udc47\ud83d\udc47OMG
-        BMX\ud83d\udc47\ud83d\udc47","id":"395927937"},{"username":"fsarcade","bio":"Behind
-        the scenes of Fullscreen Arcade \u0026 gaming events.","website":"http:\/\/www.youtube.com\/fullscreenarcade","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_372431798_75sq_1368054214.jpg","full_name":"FullScreen
-        Arcade","id":"372431798"},{"username":"zhayashii","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_375358116_75sq_1368342903.jpg","full_name":"MangollonTube
-        | FullScreen","id":"375358116"},{"username":"fullscreenfarms","bio":"","website":"","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xap1\/1689478_804004872978330_1626730704_a.jpg","full_name":"FullScreenFarms","id":"1421396232"},{"username":"fullscreenaccelerate","bio":"YouTube''s
-        Mancave.","website":"http:\/\/www.youtube.com\/Accelerate","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_582975060_75sq_1380565067.jpg","full_name":"Accelerate","id":"582975060"},{"username":"johan_fullscreen","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_222869798_75sq_1380296732.jpg","full_name":"","id":"222869798"},{"username":"mucorsario","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_230591272_75sq_1349121966.jpg","full_name":"Marcelo
-        Fullscreen","id":"230591272"},{"username":"fullscreenmedia","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_232996244_75sq_1349603671.jpg","full_name":"Harold
-        O''Bryant","id":"232996244"},{"username":"fullscreen32","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_240058675_75sq_1355456651.jpg","full_name":"SC","id":"240058675"},{"username":"fullscreennorm","bio":"Love
-        is the delightful interval between meeting a beautiful girl and discovering
-        that she looks like a haddock.","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_264221424_75sq_1354853534.jpg","full_name":"","id":"264221424"},{"username":"fullscreen255","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"Louise
-        garfoot","id":"334173390"},{"username":"fullscreeninc","bio":"Official Apple
-        Help - Instagram For More Information Kik Us On @KikAppleProducts","website":"http:\/\/Apple.com","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_343125191_75sq_1365028404.jpg","full_name":"Instagram","id":"343125191"},{"username":"full_screen","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"\u0421\u0435\u0440\u0435\u0436\u043a\u0430","id":"419829651"},{"username":"fullscreengo","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"Fullscreen
-        GO","id":"458392598"},{"username":"fullscreenphotos","bio":"Hey I just use
-        this acc to post cool full screen photos of famous people\/youtubers","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_510854299_75sq_1376688275.jpg","full_name":"Sierra","id":"510854299"},{"username":"fullscreennormal770","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"565451483"},{"username":"fullscreener","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"Fulldsb","id":"631764547"},{"username":"ipinfullscreen","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_671085751_75sq_1384366037.jpg","full_name":"ipin
-        fullscreen","id":"671085751"},{"username":"fullscreendude","bio":"","website":"","profile_picture":"http:\/\/scontent-b.cdninstagram.com\/hphotos-xap1\/outbound-distillery\/t0.0-20\/OBPTH\/profiles\/anonymousUser.jpg","full_name":"","id":"810579730"},{"username":"jspade_fullscreen","bio":"Email
-        me at jspade@fullscreen.net","website":"http:\/\/www.fullscreenvirals.net","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_917287093_75sq_1388780355.jpg","full_name":"Jason
-        Spade","id":"917287093"},{"username":"fullscreen56","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1424209486"},{"username":"fullscreenproduction","bio":"","website":"http:\/\/www.fullscreen.hr","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1467498522"},{"username":"fullscreen71","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1498965524"},{"username":"fullscreendev","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1501212944"}]}'
+      string: '{"meta":{"code":200},"data":[{"username":"fullscreenlive","profile_picture":"https:\/\/igcdn-photos-g-a.akamaihd.net\/hphotos-ak-xfa1\/t51.2885-19\/s150x150\/11380055_911947602208918_979808696_a.jpg","id":"1428352739","full_name":"Fullscreen
+        Live"},{"username":"fullscreen","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_270587948_75sq_1395968129.jpg","id":"270587948","full_name":"Fullscreen"},{"username":"fullscreenhello","profile_picture":"https:\/\/igcdn-photos-c-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/11352934_371941299670578_2086971949_a.jpg","id":"2040070340","full_name":"Fullscreen
+        Hello"},{"username":"fullscreentv_","profile_picture":"https:\/\/igcdn-photos-h-a.akamaihd.net\/hphotos-ak-xfa1\/t51.2885-19\/11353481_499790813505335_978262230_a.jpg","id":"1937858001","full_name":"Fullscreen
+        TV"},{"username":"fullscreen_inc","profile_picture":"https:\/\/igcdn-photos-c-a.akamaihd.net\/hphotos-ak-xap1\/t51.2885-19\/10914423_882706541793234_1256977405_a.jpg","id":"1644540289","full_name":""},{"username":"fullscreen.pt","profile_picture":"https:\/\/igcdn-photos-h-a.akamaihd.net\/hphotos-ak-xap1\/t51.2885-19\/925542_696419687140207_765477685_a.jpg","id":"1636590788","full_name":"Fullscreen.pt"},{"username":"fullscreenksa","profile_picture":"https:\/\/igcdn-photos-h-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/11327160_1435573196747727_1872387059_a.jpg","id":"2054902981","full_name":"fullscreen"},{"username":"fullscreenit","profile_picture":"https:\/\/igcdn-photos-c-a.akamaihd.net\/hphotos-ak-xfa1\/t51.2885-19\/10724219_787575974631882_2133138302_a.jpg","id":"416534668","full_name":"Nelson
+        Melgar"},{"username":"fullscreen1","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_37075703_75sq_1388684550.jpg","id":"37075703","full_name":"\u05de\u05e1\u05da
+        \u05de\u05dc\u05d0"},{"username":"fsarcade","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_372431798_75sq_1368054214.jpg","id":"372431798","full_name":"FullScreen
+        Arcade"},{"username":"fullscreentv","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"1661320187","full_name":"Fullscreen"},{"username":"calebrmata","profile_picture":"https:\/\/igcdn-photos-a-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11358936_1621316008156976_279643471_a.jpg","id":"1407694036","full_name":"Fullscreen
+        Network Partner"},{"username":"fullscreenmilo","profile_picture":"https:\/\/igcdn-photos-d-a.akamaihd.net\/hphotos-ak-xap1\/t51.2885-19\/10654909_270596979731099_1630051846_a.jpg","id":"247576002","full_name":"Milo
+        Cruz"},{"username":"fullscreenofficial","profile_picture":"https:\/\/igcdn-photos-c-a.akamaihd.net\/hphotos-ak-xfp1\/t51.2885-19\/10950600_355262991346130_1742318399_a.jpg","id":"473416451","full_name":"Full
+        Screen"},{"username":"poyfullscreenpt","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_17204081_75sq_1385859044.jpg","id":"17204081","full_name":"PoyPu
+        Fullscreen Band"},{"username":"ipinfullscreen","profile_picture":"https:\/\/igcdn-photos-c-a.akamaihd.net\/hphotos-ak-xpf1\/t51.2885-19\/10785017_1545248505690242_707195996_a.jpg","id":"671085751","full_name":"ipin
+        fullscreen"},{"username":"bmx_fullscreen","profile_picture":"https:\/\/igcdn-photos-h-a.akamaihd.net\/hphotos-ak-xap1\/t51.2885-19\/10401855_472048132931903_1216185133_a.jpg","id":"395927937","full_name":"\ud83d\udc47\ud83d\udc47OMG
+        BMX\ud83d\udc47\ud83d\udc47"},{"username":"jspade_fullscreen","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_917287093_75sq_1388780355.jpg","id":"917287093","full_name":"Jason
+        Spade"},{"username":"fullscreen_out_of_range","profile_picture":"https:\/\/igcdn-photos-f-a.akamaihd.net\/hphotos-ak-xpf1\/t51.2885-19\/10914106_771506196253181_103111041_a.jpg","id":"1638477049","full_name":""},{"username":"fullscreen_krit","profile_picture":"https:\/\/igcdn-photos-a-a.akamaihd.net\/hphotos-ak-xpa1\/t51.2885-19\/10684183_322099684629832_1430692670_a.jpg","id":"1225819888","full_name":"|TGN|
+        PARTNER IN CRIME"},{"username":"johan_fullscreen","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_222869798_75sq_1380296732.jpg","id":"222869798","full_name":""},{"username":"mucorsario","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_230591272_75sq_1349121966.jpg","id":"230591272","full_name":"Marcelo
+        Fullscreen"},{"username":"fullscreenmedia","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_232996244_75sq_1349603671.jpg","id":"232996244","full_name":"Harold
+        O''Bryant"},{"username":"fullscreen32","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_240058675_75sq_1355456651.jpg","id":"240058675","full_name":"SC"},{"username":"fullscreennorm","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_264221424_75sq_1354853534.jpg","id":"264221424","full_name":""},{"username":"fullscreen255","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"334173390","full_name":"Louise
+        garfoot"},{"username":"fullscreeninc","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_343125191_75sq_1365028404.jpg","id":"343125191","full_name":"Instagram"},{"username":"zhayashii","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_375358116_75sq_1368342903.jpg","id":"375358116","full_name":"MangollonTube
+        | FullScreen"},{"username":"full_screen","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"419829651","full_name":"\u0421\u0435\u0440\u0435\u0436\u043a\u0430"},{"username":"fullscreengo","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"458392598","full_name":"Fullscreen
+        GO"},{"username":"fullscreenphotos","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_510854299_75sq_1376688275.jpg","id":"510854299","full_name":"Sierra"},{"username":"fullscreennormal770","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"565451483","full_name":""},{"username":"fullscreenaccelerate","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_582975060_75sq_1380565067.jpg","id":"582975060","full_name":"Accelerate"},{"username":"fullscreener","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"631764547","full_name":"Fulldsb"},{"username":"fullscreendude","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"810579730","full_name":""},{"username":"fullscreenfarms","profile_picture":"https:\/\/igcdn-photos-c-a.akamaihd.net\/hphotos-ak-xpf1\/t51.2885-19\/1689478_804004872978330_1626730704_a.jpg","id":"1421396232","full_name":"FullScreenFarms"},{"username":"fullscreen56","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"1424209486","full_name":""},{"username":"fullscreenlamonsta","profile_picture":"https:\/\/igcdn-photos-d-a.akamaihd.net\/hphotos-ak-xap1\/t51.2885-19\/10729275_289700984567235_1834050756_a.jpg","id":"1440026224","full_name":"Lamonsta"},{"username":"hd_fullscreen_gaming","profile_picture":"https:\/\/igcdn-photos-d-a.akamaihd.net\/hphotos-ak-xpa1\/t51.2885-19\/10553969_1529050753973467_135987297_a.jpg","id":"1450067292","full_name":"Gaming
+        Account"},{"username":"fullscreenproduction","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"1467498522","full_name":""},{"username":"ryuzakikamikaze","profile_picture":"https:\/\/igcdn-photos-e-a.akamaihd.net\/hphotos-ak-xfa1\/t51.2885-19\/10644089_823364024349380_1950878469_a.jpg","id":"1477538401","full_name":"J\u00e3o|
+        fullscreen"},{"username":"fullscreen71","profile_picture":"https:\/\/igcdn-photos-a-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11330520_603076773167912_1267738436_a.jpg","id":"1498965524","full_name":""},{"username":"fullscreentrish","profile_picture":"https:\/\/igcdn-photos-e-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/1724340_283066951879076_826800923_a.jpg","id":"1501092156","full_name":"Trish"},{"username":"fullscreendev","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"1501212944","full_name":""},{"username":"fs_test1234","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"1660641803","full_name":"Fullscreen"},{"username":"fullscreenn","profile_picture":"https:\/\/igcdn-photos-h-a.akamaihd.net\/hphotos-ak-xfa1\/t51.2885-19\/10990648_1566434603625527_406772055_a.jpg","id":"1709831266","full_name":"Fikrett"},{"username":"lning_n123","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"1770489423","full_name":""},{"username":"fullscreenestampados","profile_picture":"https:\/\/igcdn-photos-c-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/11049414_1605853316339706_1133286371_a.jpg","id":"1786792769","full_name":"Fullscreen
+        Estampados"},{"username":"fullscreen09","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"1947694984","full_name":""},{"username":"fullscreen.dev","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"2006526232","full_name":""}]}'
     http_version: 
-  recorded_at: Wed, 15 Oct 2014 18:58:27 GMT
+  recorded_at: Wed, 05 Aug 2015 22:17:14 GMT
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/41672819?client_id=CLIENT_ID
+    uri: https://api.instagram.com/v1/users/270587948?client_id=INSTAGRAM_CLIENT_ID
     body:
       encoding: US-ASCII
       string: ''
@@ -111,39 +88,35 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
+      X-Ratelimit-Remaining:
+      - '4992'
       Content-Language:
       - en
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 15 Oct 2014 18:58:28 GMT
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - nginx
-      Set-Cookie:
-      - ccode=US; Path=/
-      - csrftoken=d394e618bb5b63dd2b18cea79d12e4e3; expires=Wed, 14-Oct-2015 18:58:28
-        GMT; Max-Age=31449600; Path=/
       Vary:
       - Cookie, Accept-Language, Accept-Encoding
       X-Ratelimit-Limit:
       - '5000'
-      X-Ratelimit-Remaining:
-      - '4973'
-      Content-Length:
-      - '237'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 05 Aug 2015 22:17:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=03c90c60230d975f784aad6e57d7ad48; expires=Wed, 03-Aug-2016 22:17:14
+        GMT; Max-Age=31449600; Path=/
       Connection:
       - keep-alive
+      Content-Length:
+      - '312'
     body:
       encoding: UTF-8
-      string: '{"meta":{"code":200},"data":{"username":"fullscreen","bio":"Let your
-        dreams come true...","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_41672819_75sq_1390767340.jpg","full_name":"Kermit
-        De Luxe","counts":{"media":150,"followed_by":271,"follows":29},"id":"41672819"}}'
+      string: '{"meta":{"code":200},"data":{"username":"fullscreen","bio":"#PowerToTheCreators\nClick
+        the link below to order #O2LFOREVER, exclusively on Vimeo! \ud83d\udc47","website":"http:\/\/full.sc\/1KeYG5j","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_270587948_75sq_1395968129.jpg","full_name":"Fullscreen","counts":{"media":1327,"followed_by":22229,"follows":1171},"id":"270587948"}}'
     http_version: 
-  recorded_at: Wed, 15 Oct 2014 18:58:28 GMT
+  recorded_at: Wed, 05 Aug 2015 22:17:15 GMT
 recorded_with: VCR 2.9.3

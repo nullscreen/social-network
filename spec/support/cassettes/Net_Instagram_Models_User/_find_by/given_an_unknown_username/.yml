@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/search?client_id=CLIENT_ID&q=01LjqweoojkjR
+    uri: https://api.instagram.com/v1/users/search?client_id=INSTAGRAM_CLIENT_ID&q=01LjqweoojkjR
     body:
       encoding: US-ASCII
       string: ''
@@ -18,37 +18,34 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
+      X-Ratelimit-Remaining:
+      - '4996'
       Content-Language:
       - en
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 15 Oct 2014 18:47:44 GMT
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - nginx
-      Set-Cookie:
-      - ccode=US; Path=/
-      - csrftoken=59dcc4097f2adf2c1a7badc08f1f9e5b; expires=Wed, 14-Oct-2015 18:47:44
-        GMT; Max-Age=31449600; Path=/
       Vary:
       - Cookie, Accept-Language
       X-Ratelimit-Limit:
       - '5000'
-      X-Ratelimit-Remaining:
-      - '4984'
-      Content-Length:
-      - '49'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 05 Aug 2015 22:17:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=81912a08f116a76502acbd6de175db45; expires=Wed, 03-Aug-2016 22:17:13
+        GMT; Max-Age=31449600; Path=/
       Connection:
       - keep-alive
+      Content-Length:
+      - '31'
     body:
       encoding: UTF-8
       string: '{"meta":{"code":200},"data":[]}'
     http_version: 
-  recorded_at: Wed, 15 Oct 2014 18:47:44 GMT
+  recorded_at: Wed, 05 Aug 2015 22:17:13 GMT
 recorded_with: VCR 2.9.3
