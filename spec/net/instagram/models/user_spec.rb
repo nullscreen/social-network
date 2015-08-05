@@ -12,7 +12,7 @@ describe Net::Instagram::User, :vcr do
 
   let(:existing_username) { 'Fullscreen' }
   let(:unknown_username) { '01LjqweoojkjR' }
-  let(:private_username) { 'brohemian' }
+  let(:private_username) { 'qz_privacy_test' }
 
   describe '.find_by' do
     subject(:user) { Net::Instagram::User.find_by username: username }
