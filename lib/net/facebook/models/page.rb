@@ -36,13 +36,7 @@ module Net
         #   (case-insensitive).
         # @raise [Net::Errors::UnknownUser] if the page cannot be found.
         def self.find_by!(params = {})
-          find_by_username! params[:username]
-        end
-
-      private
-
-        def self.find_by_username!(username)
-          request = Api::Request.new params: username
+          request = Api::Request.new params
           new request.run
         rescue Errors::ResponseError => error
           case error.response
