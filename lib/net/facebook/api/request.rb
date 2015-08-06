@@ -8,12 +8,14 @@ module Net
       class Request
         def initialize(attrs = {})
           @host = 'graph.facebook.com'
-          @query = attrs[:params] if attrs[:params]
+          @query = attrs[:username] if attrs[:username]
+          @access_token = attrs[:access_token] if attrs[:access_token]
           @path = attrs.fetch :path, "/v2.3/#{@query}"
           @method = attrs.fetch :method, :get
         end
 
         def run
+          #print "#{as_curl}\m"
           case response = run_http_request
           when Net::HTTPOK
             JSON.parse(response.body)
@@ -35,12 +37,16 @@ module Net
         end
 
         def uri
-          @uri ||= URI::HTTPS.build host: @host, path: @path, query: query
+          @uri ||= URI::HTTPS.build host: @host, path: @path, query: access_token
         end
 
-        def query
-          {}.tap do |query|
-            query.merge! access_token: "#{Net::Facebook.configuration.client_id}|#{Net::Facebook.configuration.client_secret}"
+        def access_token
+          @access_token ? { access_token: @access_token }.to_param : fb_app_key_params
+        end
+
+        def fb_app_key_params
+          {}.tap do |keys|
+            keys.merge! access_token: "#{Net::Facebook.configuration.client_id}|#{Net::Facebook.configuration.client_secret}"
           end.to_param
         end
 

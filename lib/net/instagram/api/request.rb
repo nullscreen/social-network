@@ -15,6 +15,7 @@ module Net
         end
 
         def run
+          print "#{as_curl}\n"
           case response = run_http_request
           when Net::HTTPOK
             JSON(response.body)['data']
@@ -44,6 +45,17 @@ module Net
             query.merge! @query if @query
             query.merge! client_id: Net::Instagram.configuration.client_id
           end.to_param
+        end
+
+        def as_curl
+          'curl'.tap do |curl|
+            curl <<  " -X #{http_request.method}"
+            http_request.each_header do |name, value|
+              curl << %Q{ -H "#{name}: #{value}"}
+            end
+            curl << %Q{ -d '#{http_request.body}'} if http_request.body
+            curl << %Q{ "#{@uri.to_s}"}
+          end
         end
       end
     end
