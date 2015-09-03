@@ -15,6 +15,7 @@ module Net
         end
 
         def run
+          #print "#{as_curl}\n"
           case response = run_http_request
           when Net::HTTPOK
             JSON(response.body)['data']
