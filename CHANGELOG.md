@@ -35,7 +35,7 @@ If it does, then replace your calls to `followers_count` with `follower_count` (
 
 * [FEATURE] Add `find_by id: [Integer] and find_by! id: [Integer] to Instagram::User`.
 
-## 0.3.3 - 2015-08-12
+## 0.3.3 - 2015-09-02
 
 * [FEATURE] - Add `Facebook::User` supporting `find_by` and `find_by!`
             - Add `pages` method for `Facebook::User` to return list of Facebook Pages
