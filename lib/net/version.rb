@@ -1,3 +1,3 @@
 module Net
-  VERSION = "0.2.4"
+  VERSION = "0.3.3"
 end
