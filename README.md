@@ -97,6 +97,25 @@ page = Net::Facebook::Page.find_by username: 'fullscreeninc'
 page.likes #=> 7025
 ```
 
+Net::Facebook::User
+--------------------
+
+Use [Net::Facebook::User]() to:
+
+* retrieve a Facebook user by username
+
+```ruby
+user = Net::Facebook::User.find_by username: '10100829454613149'
+user.first_name #=> Jeremy
+```
+
+* Include a Facebook access_token parameter in order to access pages information for a certain user
+
+```ruby
+user = Net::Facebook::User.find_by username: '10100829454613149', access_token: 'abc123'
+user.pages #=> [{"name"=>"Jeremy Video Game", "id"=>"1627249647512991"}, {"name"=>"Influencer Plus", "id"=>"629655227132365"}]
+```
+
 *The methods above require a configured Facebook app (see below).*
 
 Configuring your Twitter app
