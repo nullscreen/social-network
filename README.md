@@ -71,12 +71,15 @@ Net::Instagram::User
 Use [Net::Instagram::User]() to:
 
 * retrieve an Instagram user by username
+* retrieve an Instagram user by id
 * access the number of followers of an Instagram user
-* access the number of following of an Instagram user
 
 ```ruby
 user = Net::Instagram::User.find_by username: 'fullscreen'
-user.follower_count #=> 7025
+user.follower_count #=> 24198
+
+user = Net::Instagram::User.find_by id: 270587948
+user.follower_count #=> 24198
 ```
 
 *The methods above require a configured Instagram app (see below).*

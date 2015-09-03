@@ -33,9 +33,15 @@ module Net
         # @param [Hash] params the attributes to find a user by.
         # @option params [String] :username The Instagram user’s username
         #   (case-insensitive).
+        # @option params [String] :id The Instagram user’s id
+        #   (case-insensitive).
         # @raise [Net::Errors::PrivateUser] if the user account is private.
         def self.find_by!(params = {})
-          find_by_username! params[:username]
+          if params[:username]
+            find_by_username! params[:username]
+          elsif params[:id]
+            find_by_id! params[:id]
+          end
         end
 
       private
